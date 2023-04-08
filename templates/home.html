@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<body>
+  <div style="position: relative; display: inline-block;">
+    <div style="position: absolute; display: flex; height: 100px; width: 100%; align-items: center; padding:20px;">
+        <!-- player health-->
+        <div class="healthBar" style="display: flex; justify-content: flex-end;">
+            <div style="background-color: gray;" class='totalHealth'></div>
+            <div id='playerBackHealth'></div>
+            <div class='outline'></div>
+            <div id="playerHealth"></div>
+        </div>
+        <!-- timer-->
+        <div id="timer" style="display: flex;"></div>
+        <!-- enemy health-->
+        <div class="healthBar">
+            <div style="background-color: gray;" class='totalHealth'></div>
+            <div id='enemyBackHealth'></div>
+            <div class='outline'></div>
+            <div id="enemyHealth"></div>
+        </div>
+    </div>
+    <div id="displayText" style="position: absolute; color: white; display: none; align-items: center; justify-content: center; 
+    top: 0; right: 0; left: 0; bottom: 0;">Tie</div>
+    <canvas id="canvas"></canvas> 
+  </div>
+</body>
+
+{% endblock %}
